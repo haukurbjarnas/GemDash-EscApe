@@ -15,7 +15,7 @@ C:/spring_2026/agdd/gem-dash-platformer/AGDDPlatformer-GemDash-Base-master
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62515
+57684
 Successfully changed project path to: C:/spring_2026/agdd/gem-dash-platformer/AGDDPlatformer-GemDash-Base-master
 C:/spring_2026/agdd/gem-dash-platformer/AGDDPlatformer-GemDash-Base-master
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,17 +49,23 @@ C:/spring_2026/agdd/gem-dash-platformer/AGDDPlatformer-GemDash-Base-master
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [35508]  Target information:
+Player connection [31728]  Target information:
 
-Player connection [35508]  * "[IP] 10.5.0.2 [Port] 0 [Flags] 2 [Guid] 3090211476 [EditorId] 3090211476 [Version] 1048832 [Id] WindowsEditor(7,HAUKURS-IDEAPAD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [31728]  * "[IP] 10.5.0.2 [Port] 0 [Flags] 2 [Guid] 2640766373 [EditorId] 2640766373 [Version] 1048832 [Id] WindowsEditor(7,HAUKURS-IDEAPAD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [35508]  * "[IP] 10.100.4.125 [Port] 0 [Flags] 2 [Guid] 3090211476 [EditorId] 3090211476 [Version] 1048832 [Id] WindowsEditor(7,HAUKURS-IDEAPAD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [31728]  * "[IP] 10.100.4.125 [Port] 0 [Flags] 2 [Guid] 2640766373 [EditorId] 2640766373 [Version] 1048832 [Id] WindowsEditor(7,HAUKURS-IDEAPAD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [35508] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [35508] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [31728] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [31728] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 739.45 ms, found 2 plugins.
+Could not open file C:/spring_2026/agdd/gem-dash-platformer/AGDDPlatformer-GemDash-Base-master/ProjectSettings/TimeManager.asset for read
+Assertion failed on expression: 'res'
+Unknown error occurred while loading 'ProjectSettings/TimeManager.asset'.
+Could not open file C:/spring_2026/agdd/gem-dash-platformer/AGDDPlatformer-GemDash-Base-master/ProjectSettings/EditorSettings.asset for read
+Assertion failed on expression: 'res'
+Unknown error occurred while loading 'ProjectSettings/EditorSettings.asset'.
+Refreshing native plugins compatible for Editor in 294.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.62f3 (96770f904ca7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data/Resources/UnitySubsystems
@@ -75,44 +81,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56524
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.037727 seconds.
-- Loaded All Assemblies, in  2.846 seconds
+Registered in 0.065198 seconds.
+- Loaded All Assemblies, in 39.909 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.591 seconds
-Domain Reload Profiling: 3420ms
-	BeginReloadAssembly (1455ms)
+- Finished resetting the current domain, in  2.009 seconds
+Domain Reload Profiling: 41904ms
+	BeginReloadAssembly (7830ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (439ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (322ms)
-	LoadAllAssembliesAndSetupDomain (603ms)
-		LoadAssemblies (1439ms)
+	RebuildCommonClasses (29957ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (1072ms)
+	LoadAllAssembliesAndSetupDomain (1016ms)
+		LoadAssemblies (7817ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (597ms)
-			TypeCache.Refresh (595ms)
-				TypeCache.ScanAssembly (564ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (591ms)
+		AnalyzeDomain (955ms)
+			TypeCache.Refresh (951ms)
+				TypeCache.ScanAssembly (808ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (2009ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (513ms)
+		SetupLoadedEditorAssemblies (1809ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (13ms)
+			InitializePlatformSupportModulesInManaged (39ms)
+			SetLoadedEditorAssemblies (56ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (353ms)
-			ProcessInitializeOnLoadMethodAttributes (116ms)
+			BeforeProcessingInitializeOnLoad (41ms)
+			ProcessInitializeOnLoadAttributes (1327ms)
+			ProcessInitializeOnLoadMethodAttributes (347ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -121,41 +127,44 @@ Domain Reload Profiling: 3420ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.685 seconds
+- Loaded All Assemblies, in 41.091 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.094 seconds
-Domain Reload Profiling: 2766ms
-	BeginReloadAssembly (367ms)
+- Finished resetting the current domain, in  3.239 seconds
+Domain Reload Profiling: 44309ms
+	BeginReloadAssembly (4355ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (1187ms)
-		LoadAssemblies (1196ms)
+		CreateAndSetChildDomain (93ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (114ms)
+	LoadAllAssembliesAndSetupDomain (36524ms)
+		LoadAssemblies (40270ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (275ms)
-			TypeCache.Refresh (249ms)
-				TypeCache.ScanAssembly (224ms)
-			ScanForSourceGeneratedMonoScriptInfo (17ms)
+		AnalyzeDomain (435ms)
+			TypeCache.Refresh (403ms)
+				TypeCache.ScanAssembly (371ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (1096ms)
+	FinalizeReload (3240ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (898ms)
+		SetupLoadedEditorAssemblies (2943ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (146ms)
-			ProcessInitializeOnLoadAttributes (676ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
-			AfterProcessingInitializeOnLoad (19ms)
+			BeforeProcessingInitializeOnLoad (177ms)
+			ProcessInitializeOnLoadAttributes (2473ms)
+			ProcessInitializeOnLoadMethodAttributes (231ms)
+			AfterProcessingInitializeOnLoad (27ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 3.64 seconds
+		AwakeInstancesAfterBackupRestoration (12ms)
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Trying to reload asset but can't find object on disk
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.84 seconds
