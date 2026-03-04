@@ -4,21 +4,9 @@ namespace AGDDPlatformer
 {
     public class KillWall : MonoBehaviour
     {
-        public float scrollSpeed = 3f;
-
-        void Update()
-        {
-            if (GameManager.instance.timeStopped) return;
-            transform.position += Vector3.right * scrollSpeed * Time.deltaTime;
-        }
-
         void OnTriggerStay2D(Collider2D other)
         {
-            PlayerController player = other.GetComponentInParent<PlayerController>();
-            if (player != null)
-            {
-                player.ResetPlayer();
-            }
+            TryKill(other);
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -27,6 +15,19 @@ namespace AGDDPlatformer
             if (player != null)
             {
                 player.ResetPlayer();
+                FindObjectOfType<CameraAutoScroll>()?.ResetCamera();
+                foreach (Laser laser in FindObjectsOfType<Laser>())
+                    laser.ResetLaser();
+            }
+        }
+
+        void TryKill(Collider2D other)
+        {
+            PlayerController player = other.GetComponentInParent<PlayerController>();
+            if (player != null)
+            {
+                player.ResetPlayer();
+                GetComponentInParent<CameraAutoScroll>().ResetCamera();
             }
         }
     }

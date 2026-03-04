@@ -7,12 +7,23 @@ namespace AGDDPlatformer
         public float scrollSpeed = 3f;
         public bool isScrolling = true;
 
+        Vector3 startPosition;
+
+        void Start()
+        {
+            startPosition = transform.position;
+        }
+
         void Update()
         {
             if (!isScrolling) return;
-            if (GameManager.instance.timeStopped) return;
 
             transform.position += Vector3.right * scrollSpeed * Time.deltaTime;
+        }
+
+        public void ResetCamera()
+        {
+            transform.position = startPosition;
         }
     }
 }
