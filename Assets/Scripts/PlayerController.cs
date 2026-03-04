@@ -12,6 +12,12 @@ namespace AGDDPlatformer
         public float jumpBufferTime = 0.1f; // Lets the player input a jump just before becoming grounded
         [HideInInspector] public float conveyorX; // Horizontal speed added by conveyors, set by ConveyorController
 
+        [Header("Conveyor Air Carry")]
+        public float conveyorAirDecay = 6f;      // how fast belt carry fades in air (units/sec)
+        [Range(0f, 1f)] public float airControlLerp = 0.12f; // 0.08–0.2 feels good
+
+float conveyorCarryX;
+
         [Header("Dash")]
         public float dashSpeed;
         public float dashTime;
@@ -158,7 +164,23 @@ namespace AGDDPlatformer
                     jumpReleased = false;
                 }
 
-                velocity.x = move.x * maxSpeed + GetConveyorSpeed();
+                float belt = GetConveyorSpeed();
+
+                if (isGrounded)
+                {
+                    conveyorCarryX = belt; // capture belt momentum while grounded
+                    velocity.x = move.x * maxSpeed + belt;
+                }
+                else
+                {
+                    // decay the captured belt momentum while airborne
+                    conveyorCarryX = Mathf.MoveTowards(conveyorCarryX, 0f, conveyorAirDecay * Time.deltaTime);
+
+                    float targetX = move.x * maxSpeed + conveyorCarryX;
+
+                    // don’t snap in air; blend toward target for nicer control + preserved momentum
+                    velocity.x = Mathf.Lerp(velocity.x, targetX, airControlLerp);
+                }
 
                 if (isGrounded || (velocity + jumpBoost).magnitude < velocity.magnitude)
                 {
