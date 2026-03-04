@@ -10,6 +10,7 @@ namespace AGDDPlatformer
         public float jumpDeceleration = 0.5f; // Upwards slow after releasing jump button
         public float cayoteTime = 0.1f; // Lets player jump just after leaving ground
         public float jumpBufferTime = 0.1f; // Lets the player input a jump just before becoming grounded
+        [HideInInspector] public float conveyorX; // Horizontal speed added by conveyors, set by ConveyorController
 
         [Header("Dash")]
         public float dashSpeed;
@@ -157,7 +158,7 @@ namespace AGDDPlatformer
                     jumpReleased = false;
                 }
 
-                velocity.x = move.x * maxSpeed;
+                velocity.x = move.x * maxSpeed + GetConveyorSpeed();
 
                 if (isGrounded || (velocity + jumpBoost).magnitude < velocity.magnitude)
                 {
@@ -183,6 +184,7 @@ namespace AGDDPlatformer
             }
 
             spriteRenderer.color = canDash ? canDashColor : cantDashColor;
+            conveyorX = 0f;
         }
 
         public void ResetPlayer()
@@ -204,6 +206,20 @@ namespace AGDDPlatformer
         public void SetJumpBoost(Vector2 jumpBoost)
         {
             this.jumpBoost = jumpBoost;
+        }
+
+        float GetConveyorSpeed()
+        {
+            if (!isGrounded) return 0f;
+
+            GameObject ground = GetGroundedOnObject();
+            if (!ground) return 0f;
+
+            // belt might be on the same object or parent (prefab setups vary)
+            var belt = ground.GetComponent<ConveyorBelt>();
+            if (!belt) belt = ground.GetComponentInParent<ConveyorBelt>();
+
+            return belt ? belt.beltSpeed : 0f;
         }
     }
 }
